@@ -11,7 +11,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/coreListItemIcon';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+
 // import Button from '@material-ui/core/Button';
 // import Divider from '@material-ui/core/Divider';
 
@@ -24,21 +25,32 @@ function Navbar() {
     setDrawer(!drawer);
   };
 
+  // This is what is inside the hamburger menu
   const list = () => (
-    <List>
-      <ListItem> Rent-A-Van</ListItem>
-      <ListItem>About Us</ListItem>
-      <ListItem>How It Works</ListItem>
-      <ListItem>Contact Us</ListItem>
-    </List>
-  );
+    <div>
+      <List>
+        <ListItem button onClick={() => history.push('/rent')}>
+          {' '}
+          Rent-A-Van
+        </ListItem>
+        {/* <ListItem onClick={() => history.push('/about')}>About Us</ListItem> */}
+        <ListItem button onClick={() => history.push('/about')}>
+          About Us
+        </ListItem>
+        <ListItem onClick={() => history.push('/howItWorks')}>
+          How It Works
+        </ListItem>
+        <ListItem onClick={() => history.push('/Contact')}>Contact Us</ListItem>
+      </List>
+    </div>
+  ); // end of list
 
   return (
     <div>
       <nav className="nav">
         <div className="nav-container">
           <AppBar style={{ color: 'white' }}>
-            <Toolbar variant="dense">
+            <Toolbar variant="dense" style={{ backgroundColor: 'black' }}>
               <Grid
                 container
                 xs={12}
