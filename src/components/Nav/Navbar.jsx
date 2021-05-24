@@ -30,17 +30,18 @@ function Navbar() {
     <div>
       <List>
         <ListItem button onClick={() => history.push('/rent')}>
-          {' '}
           Rent-A-Van
         </ListItem>
         {/* <ListItem onClick={() => history.push('/about')}>About Us</ListItem> */}
         <ListItem button onClick={() => history.push('/about')}>
           About Us
         </ListItem>
-        <ListItem onClick={() => history.push('/howItWorks')}>
+        <ListItem button onClick={() => history.push('/howItWorks')}>
           How It Works
         </ListItem>
-        <ListItem onClick={() => history.push('/Contact')}>Contact Us</ListItem>
+        <ListItem button onClick={() => history.push('/Contact')}>
+          Contact Us
+        </ListItem>
       </List>
     </div>
   ); // end of list

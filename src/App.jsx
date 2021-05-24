@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AboutPage from './components/AboutPage/AboutPage';
 import Navbar from './components/Nav/Navbar';
 import RentAVan from './components/RentAVan/RentAVan';
+import HomePage from './components/HomePage/HomePage';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         <Navbar />
         <Switch>
           {/* Home page */}
-          <Route path="/" exact />
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
 
           <Route exact path="/about">
             <AboutPage />
