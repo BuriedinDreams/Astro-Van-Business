@@ -11,6 +11,8 @@ import AboutPage from './components/AboutPage/AboutPage';
 import Navbar from './components/Nav/Navbar';
 import RentAVan from './components/RentAVan/RentAVan';
 import HomePage from './components/HomePage/HomePage';
+import HowItWorks from './components/HowItWorks/HowItWorks';
+import ContactPage from './components/ContactPage/ContactPage';
 
 function App() {
   return (
@@ -30,6 +32,15 @@ function App() {
           <Route exact path="/rent">
             <RentAVan />
           </Route>
+
+          <Route exact path="/howItWorks">
+            <HowItWorks />
+          </Route>
+
+          <Route exact path="/contact">
+            <ContactPage />
+          </Route>
+          {/*  */}
         </Switch>
       </Router>
     </div>
